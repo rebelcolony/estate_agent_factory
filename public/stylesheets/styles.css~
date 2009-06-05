@@ -45,11 +45,11 @@ padding:10px 5px;
 
 #house_numbers li {
 	display:inline;
-	padding-right: 18px;
+	padding-right: 23px;
 }
 
 #house_numbers {
-	background:#B0BEF8;
+	background:#DCDCDC;
 
  }
 
@@ -59,10 +59,22 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
+/*links
+========================================================== */
+a {
+	color: #000000;
+	text-decoration: underline;	
+}
+a:visited {
+	color: #000000;
+}
+a:hover {
+	color: #000000;
+	background-color:#4171ce;
+	text-decoration:none;
+}
 
-a { color: #000; }
-a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+
 
 .fieldWithErrors {
   padding: 2px;

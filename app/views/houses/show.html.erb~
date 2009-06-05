@@ -3,7 +3,7 @@
  
 <h4 class="price">PHP <%=h @house.price%>  <%=h @house.payment %></h4>
 
-<p><%=h @house.teaser %></p><p><%=h @house.description %></p>
+<p><%=h house.teaser %></p><p><%=h @house.description %></p>
 
 
 <ul id="house_numbers">
