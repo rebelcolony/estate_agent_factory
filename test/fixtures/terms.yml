@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  terms: MyString
+  house_id: 1
+
+two:
+  terms: MyString
+  house_id: 1

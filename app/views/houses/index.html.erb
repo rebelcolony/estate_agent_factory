@@ -1,0 +1,28 @@
+<h2>All houses for sale</h2>
+
+
+
+<% @houses.each do |house| %>
+ 
+    <div id="house_index_list">
+    	<h3><%=h house.title %></h3>
+		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
+   		<p><%=h house.teaser %></p>
+  
+	<ul id="house_numbers">
+	   <li>Bedrooms: <%=h house.bedrooms %></li>
+	   <li>Bathrooms: <%=h house.bathrooms %></li>
+	   <li>Maidsrooms: <%=h house.maidsrooms %></li>
+	   <li>Floor Area: <%=h house.floor_area %> sqm</li>
+	   <li>Lot Area: <%=h house.lot_area %> sqm</li>
+	</ul>
+  
+	
+    <td><%= link_to 'Show', house %></td>
+    <td><%= link_to 'Edit', edit_house_path(house) %></td>
+    <td><%= link_to 'Destroy', house, :confirm => 'Are you sure?', :method => :delete %></td>
+  	</div>
+<% end %>
+<br />
+
+<%= link_to 'New house', new_house_path %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  teaser: MyText
+  price: 1
+  description: MyText
+  bedrooms: 1
+  bathrooms: 1
+  maidsrooms: 1
+  floor_area: 1
+  lot_area: 1
+  payment: MyString
+
+two:
+  title: MyString
+  teaser: MyText
+  price: 1
+  description: MyText
+  bedrooms: 1
+  bathrooms: 1
+  maidsrooms: 1
+  floor_area: 1
+  lot_area: 1
+  payment: MyString
