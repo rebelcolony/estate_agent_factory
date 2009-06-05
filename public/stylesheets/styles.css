@@ -32,11 +32,12 @@ padding:10px 5px;
 
 /*houses
 ========================================================== */
-#house_index_list{
+#house_index_list h3{
+	margin-top:10px;
 	
 }
 
-#house_index_list ul, h4, h3, p{
+#house_index_list ul, h4, p{
 	padding:0;
 	margin:0;
 	list-style-type: none;

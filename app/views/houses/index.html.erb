@@ -5,9 +5,12 @@
 <% @houses.each do |house| %>
  
     <div id="house_index_list">
-    	<h3><%= link_to house.title, house %></h3>
-		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
 
+    	<h3><%= link_to house.title, house %></h3>
+		<p><%= house.location.location %></p>
+		<p><%= house.term.terms %></p>
+		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
+		<p><%=h house.teaser %></p>
 		<ul id="house_numbers">
 	   		<li>Bedrooms: <%=h house.bedrooms %></li>
 	   		<li>Bathrooms: <%=h house.bathrooms %></li>
@@ -15,7 +18,7 @@
 	   		<li>Floor Area: <%=h house.floor_area %> sqm</li>
 	   		<li>Lot Area: <%=h house.lot_area %> sqm</li>
 		</ul>
-   		<p><%=h house.teaser %></p>
+   		
   
 	
   

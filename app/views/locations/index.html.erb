@@ -3,13 +3,11 @@
 <table>
   <tr>
     <th>Location</th>
-    <th>House</th>
   </tr>
 
 <% @locations.each do |location| %>
   <tr>
     <td><%=h location.location %></td>
-    <td><%=h location.house_id %></td>
     <td><%= link_to 'Show', location %></td>
     <td><%= link_to 'Edit', edit_location_path(location) %></td>
     <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -3,13 +3,11 @@
 <table>
   <tr>
     <th>Terms</th>
-    <th>House</th>
   </tr>
 
 <% @terms.each do |term| %>
   <tr>
     <td><%=h term.terms %></td>
-    <td><%=h term.house_id %></td>
     <td><%= link_to 'Show', term %></td>
     <td><%= link_to 'Edit', edit_term_path(term) %></td>
     <td><%= link_to 'Destroy', term, :confirm => 'Are you sure?', :method => :delete %></td>

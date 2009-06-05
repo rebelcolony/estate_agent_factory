@@ -2,8 +2,6 @@
 
 one:
   location: MyString
-  house_id: 1
 
 two:
   location: MyString
-  house_id: 1

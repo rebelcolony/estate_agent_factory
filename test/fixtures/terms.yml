@@ -2,8 +2,6 @@
 
 one:
   terms: MyString
-  house_id: 1
 
 two:
   terms: MyString
-  house_id: 1

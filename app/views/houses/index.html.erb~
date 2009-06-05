@@ -5,9 +5,12 @@
 <% @houses.each do |house| %>
  
     <div id="house_index_list">
-    	<h3><%= link_to house.title, house %></h3>
-		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
 
+    	<h3><%= link_to house.title, house %></h3>
+		<p><%= house.location.location %></p>
+		<p><%= house.term.terms %></p>
+		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
+		
 		<ul id="house_numbers">
 	   		<li>Bedrooms: <%=h house.bedrooms %></li>
 	   		<li>Bathrooms: <%=h house.bathrooms %></li>
@@ -20,7 +23,7 @@
 	
   
 	
-    <td><%= link_to 'Show', house %></td>
+    
     <td><%= link_to 'Edit', edit_house_path(house) %></td>
     <td><%= link_to 'Destroy', house, :confirm => 'Are you sure?', :method => :delete %></td>
   	</div>
