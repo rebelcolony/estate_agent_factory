@@ -4,12 +4,14 @@
 
 <% @houses.each do |house| %>
  
-    <div id="house_index_list">
+    <div id="house_index_list" class="<%= cycle('list-line-odd', 'list-line-even') %>">
 
     	<h3><%= link_to house.title, house %></h3>
-		<p><%= house.location.location %></p>
-		<p><%= house.term.terms %></p>
-		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
+		<p><%=h house.location.location %></p>
+		<p><%=h house.term.terms %></p>
+		<h4 class="price"> <%=h number_to_currency(house.price, :unit => "PHP ", :separator => ".", :delimiter => "," )%>  
+
+		<%=h house.payment %></h4>
 		<p><%=h truncate(house.teaser.gsub(/<.*?>/,''), :length => 300) %></p>
 		<ul id="house_numbers">
 	   		<li>Bedrooms: <%=h house.bedrooms %></li>
@@ -21,8 +23,7 @@
    		
   
 	
-  
-	
+
     
     <td><%= link_to 'Edit', edit_house_path(house) %></td>
     <td><%= link_to 'Destroy', house, :confirm => 'Are you sure?', :method => :delete %></td>

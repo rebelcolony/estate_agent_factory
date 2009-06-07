@@ -29,7 +29,15 @@ padding:10px 5px;
 /*class styles
 ========================================================== */
 .price{
-	color:#FFB806;
+	color:#FBB608;
+}
+
+.list-line-odd{
+	background:#F2F2FA; 
+}
+
+.list-line-even{
+	background:#B8FF58; 
 }
 
 /*houses
