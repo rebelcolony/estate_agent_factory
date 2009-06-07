@@ -23,5 +23,7 @@ end
 def admin?
 	session[:password] == "goldadmin"
 end
+
+
 	
 end

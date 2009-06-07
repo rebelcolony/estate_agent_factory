@@ -9,7 +9,7 @@
     	<h3><%= link_to house.title, house %></h3>
 		<p><%=h house.location.location %></p>
 		<p><%=h house.term.terms %></p>
-		<h4 class="price"> <%=h number_to_currency(house.price, :unit => "PHP", :separator => ".", :delimiter => "," )%>  
+		<h4 class="price"> <%=h number_to_currency(house.price, :unit => "PHP ", :separator => ".", :delimiter => "," )%>  
 
 		<%=h house.payment %></h4>
 		<p><%=h truncate(house.teaser.gsub(/<.*?>/,''), :length => 300) %></p>

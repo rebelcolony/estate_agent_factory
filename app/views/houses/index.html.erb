@@ -24,13 +24,16 @@
   
 	
 
-    
-    <td><%= link_to 'Edit', edit_house_path(house) %></td>
-    <td><%= link_to 'Destroy', house, :confirm => 'Are you sure?', :method => :delete %></td>
-  	</div>
+    <% if admin? %>
+    	<td><%= link_to 'Edit', edit_house_path(house) %></td>
+    	<td><%= link_to 'Destroy', house, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
+
+  	<!-- END #house_index_list --></div>
 <% end %>
 <br />
-
-<%= link_to 'New house', new_house_path %>
+	 <% if admin? %>
+		<%= link_to 'New house', new_house_path %>
+	<% end %>
 
 
