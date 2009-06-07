@@ -31,6 +31,6 @@
 
 		<%= yield %>
 
-	<!-- END WRAPPER --></div>
+	<!-- END #wrapper --></div>
 </body>
 </html>

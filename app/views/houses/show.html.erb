@@ -1,7 +1,7 @@
 <div id="house_show">
 	<h3><%=h @house.title %></h3>
  
-	<h4 class="price"> <%=h number_to_currency(@house.price, :unit => "PHP ", :separator => ".", :delimiter => "," )%>  <%=h @house.payment %></h4>
+	<h4 class="price"> <%=h number_to_currency(@house.price, :unit => "PHP ", :delimiter => "," )%>  <%=h @house.payment %></h4>
 	
 	<p><%= @house.location.location %></p>
 	<p><%= @house.term.terms %></p>

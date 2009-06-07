@@ -16,11 +16,12 @@
 	   	<li>Lot Area: <%=h @house.lot_area %> sqm</li>
 	</ul>
 
-<!-- END #house_show --></div>
-
 <% if admin? %>
 	<%= link_to 'Edit', edit_house_path(@house) %> |
 	<%= link_to 'Back', houses_path %>
 <% end %>
+
+
+<!-- END #house_show --></div>
 
 

@@ -14,8 +14,10 @@
 		<div id="navigation">
 			<ul>
 	         	<li><%= link_to_unless_current 'Home', houses_path %></li>
+				<% if admin? %>
 	         	<li><%= link_to_unless_current 'Locations', locations_path %></li>
 	         	<li><%= link_to_unless_current 'Terms', terms_path %></li>
+				<% end %>
 			</ul>
 		<!-- END #navigation --> </div>
 
