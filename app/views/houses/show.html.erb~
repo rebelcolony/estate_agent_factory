@@ -2,8 +2,8 @@
 	<h3><%=h @house.title %></h3>
  
 	<h4 class="price">PHP <%=h @house.price%>  <%=h @house.payment %></h4>
-	<p><%= house.location.location %></p>
-	<p><%= house.term.terms %></p>
+	<p><%= @house.location.location %></p>
+	<p><%= @house.term.terms %></p>
 	<p><%=h @house.teaser %></p><p><%=h @house.description %></p>
 
 
@@ -15,7 +15,7 @@
 	   	<li>Lot Area: <%=h @house.lot_area %> sqm</li>
 	</ul>
 
-</div>
+<!-- END #house_show --></div>
 
 
 <%= link_to 'Edit', edit_house_path(@house) %> |

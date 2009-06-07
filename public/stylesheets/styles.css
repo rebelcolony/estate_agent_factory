@@ -29,7 +29,7 @@ padding:10px 5px;
 /*class styles
 ========================================================== */
 .price{
-	color:#F4C511;
+	color:#FBB608;
 }
 
 /*houses
@@ -107,6 +107,34 @@ a:hover {
 }
 
 
+/*Errors / Notifications
+========================================================== */
+#notification {
+	border: 2px solid #9c9;
+	background-color: #cfc;
+	padding: 5px;
+	padding-left: 50px;
+	margin: 0px 0;
+	width: 400px;
+	height: 20px;
+	background-image: url(../images/Knob-Valid-Green.gif);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+
+}
+#error{
+	border: 2px solid;
+	background-color: #FFBABA;
+	padding: 5px;
+	padding-left: 50px;
+	margin: 0px 0;
+	width: 600px;
+	height: 20px;
+	background-image: url(../images/Knob-Cancel.gif);
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border-color: #FF0000;
+}
 
 .fieldWithErrors {
   padding:2px;

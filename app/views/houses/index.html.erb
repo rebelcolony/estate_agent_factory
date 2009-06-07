@@ -10,7 +10,7 @@
 		<p><%= house.location.location %></p>
 		<p><%= house.term.terms %></p>
 		<h4 class="price">PHP <%=h house.price%>  <%=h house.payment %></h4>
-		<p><%=h house.teaser %></p>
+		<p><%=h truncate(house.teaser.gsub(/<.*?>/,''), :length => 300) %></p>
 		<ul id="house_numbers">
 	   		<li>Bedrooms: <%=h house.bedrooms %></li>
 	   		<li>Bathrooms: <%=h house.bathrooms %></li>
@@ -31,3 +31,5 @@
 <br />
 
 <%= link_to 'New house', new_house_path %>
+
+

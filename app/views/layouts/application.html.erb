@@ -4,7 +4,7 @@
 
 	<head>
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-		<title>goldhouse <%= @page_title %></title>
+		<title>goldhouse <%= controller.action_name %></title>
 		<%= stylesheet_link_tag 'styles' %>
 		<%= javascript_include_tag 'prototype.js' %>
 	</head>
@@ -18,9 +18,19 @@
 	         	<li><%= link_to_unless_current 'Terms', terms_path %></li>
 			</ul>
 		<!-- END #navigation --> </div>
+
+	<!-- notifications -->
+		<% unless flash[:notice].blank? %>
+			<div id="notification"><%= flash[:notice] %></div>
+		<% end %>
+		<% unless flash[:error].blank? %>
+			<div id="error"><%= flash[:error] %></div>
+		<% end %>
+	<!-- END notifications -->
+
+
 		<%= yield %>
 
-	<!-- END WRAPPER --></div>
-
+	<!-- END #wrapper --></div>
 </body>
 </html>
