@@ -1,2 +1,9 @@
 class House < ActiveRecord::Base
+
+	#validates_presence_of :title
+	validates_length_of :title, :within => 10..60
+	validates_presence_of :teaser
+	belongs_to :location
+	belongs_to :term
+	
 end

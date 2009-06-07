@@ -11,8 +11,15 @@
 
 <body>
 	<div id="wrapper">
-		
+		<div id="navigation">
+		<ul>
+	         <li><%= link_to_unless_current 'Home', houses_path %></li>
+	         <li><%= link_to_unless_current 'Locations', locations_path %></li>
+	         <li><%= link_to_unless_current 'Terms', terms_path %></li>
+		</ul>
+		<!-- END #navigation --> </div>
 		<%= yield %>
+
 	<!-- END WRAPPER --></div>
 
 </body>
