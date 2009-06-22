@@ -27,7 +27,7 @@ before_filter :authorize, :except => [:index, :show]
   # GET /houses/new.xml
   def new
     @house = House.new
-
+    1.upto(3) { @house.photos.build }
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @house }
@@ -37,13 +37,17 @@ before_filter :authorize, :except => [:index, :show]
   # GET /houses/1/edit
   def edit
     @house = House.find(params[:id])
+    if @house.photos.first.nil?
+    1.upto(3) { @house.photos.build }
+    end
   end
+  
 
   # POST /houses
   # POST /houses.xml
   def create
     @house = House.new(params[:house])
-
+    
     respond_to do |format|
       if @house.save
         flash[:notice] = 'House was successfully created.'
@@ -59,8 +63,11 @@ before_filter :authorize, :except => [:index, :show]
   # PUT /houses/1
   # PUT /houses/1.xml
   def update
-    @house = House.find(params[:id])
-
+        params[:photo_ids] ||= []
+        @house = House.find(params[:id])
+        unless params[:photo_ids].empty?
+            Photo.destroy_pics(params[:id], params[:photo_ids])
+        end
     respond_to do |format|
       if @house.update_attributes(params[:house])
         flash[:notice] = 'House was successfully updated.'

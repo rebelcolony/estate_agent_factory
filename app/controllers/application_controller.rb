@@ -14,7 +14,7 @@ protected
 
 def authorize
 	unless admin?
-	flash[:error] = "Unauthorized Access dude"
+	flash[:error] = "Unauthorized Access"
 	redirect_to houses_path
 	end
 end

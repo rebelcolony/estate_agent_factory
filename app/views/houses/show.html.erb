@@ -15,6 +15,10 @@
 	   	<li>Floor Area: <%=h @house.floor_area %> sqm</li>
 	   	<li>Lot Area: <%=h @house.lot_area %> sqm</li>
 	</ul>
+	<% for photo in @house.photos %>
+	    <%= image_tag photo.data.url(:thumb), :alt => "" %>
+	<% end -%>
+	    
 
 <% if admin? %>
 	<%= link_to 'Edit', edit_house_path(@house) %> |

@@ -8,5 +8,13 @@ class House < ActiveRecord::Base
 
 	belongs_to :location
 	belongs_to :term
+	has_many :photos
 	
+	def photo_attributes=(photo_attributes)
+        photo_attributes.each do |attributes|
+    photos.build(attributes)
+         end
+    end
 end
+
+

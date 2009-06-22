@@ -1,4 +1,5 @@
 class TermsController < ApplicationController
+    before_filter :authorize
   # GET /terms
   # GET /terms.xml
   def index

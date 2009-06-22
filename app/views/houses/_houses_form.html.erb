@@ -1,76 +1,95 @@
 <div id="house_form">
-<% form_for(@house) do |f| %>
-  <%= f.error_messages %>
 
-  
+<%= f.error_messages %>
+
+    <!-- TITLE -->
     <%= f.label :title %>
 	<p>
     <%= f.text_field :title %>
   	</p>
-
+  	
+    <!-- LOCATION -->
  	<%= f.label :location %>
 	<p>
 	<%= collection_select(:house, :location_id, Location.find(:all), :id, :location) %>
 	</p>
-
+	
+    <!-- TERMS -->
  	<%= f.label :terms %>
 	<p>
 	<%= collection_select(:house, :term_id, Term.find(:all), :id, :terms) %>
 	</p>
-
+	
+    <!-- TEASER -->
 	<%= f.label :teaser %>
   	<p>
     <%= f.text_area :teaser %>
 	</p>
-
-  
+	
+    <!-- PRICE -->
     <%= f.label :price %>
 	<p>
     <%= f.text_field :price %>
   	</p>
-
+  	
+    <!-- DESCRIPTION -->
     <%= f.label :description %>
 	<p>
     <%= f.text_area :description %>
   	</p>
-
+  	
+    <!-- BEDROOMS -->
     <%= f.label :bedrooms %>
 	<p>
     <%= f.text_field :bedrooms %>
   	</p>
-
-  
+  	
+    <!-- BATHROOMS -->
     <%= f.label :bathrooms %>
 	<p>
     <%= f.text_field :bathrooms %>
   	</p>
-
-  
+  	
+    <!-- MAIDSROOMS -->
     <%= f.label :maidsrooms %>
 	<p>
     <%= f.text_field :maidsrooms %>
   	</p>
-
-  
+  	
+    <!-- FLOOR_AREA -->
     <%= f.label :floor_area %>
 	<p>
     <%= f.text_field :floor_area %>
   	</p>
-
   	
+    <!-- LOT_AREA -->
     <%= f.label :lot_area %>
 	<p>
     <%= f.text_field :lot_area %>
   	</p>
-
-
+  	
+    <!-- PAYMENT -->
     <%= f.label :payment %>
 	<p>
     <%= f.text_field :payment %>
   	</p>
+  	
+  
+  	<% @house.photos.each do |photo| %>
+  	    <div>
+  	        <%= image_tag(photo.data.url(:thumb), :alt => '') %>
+  	        <%= check_box_tag "photo_ids[]", photo.id %>
+  	    </div>
+  	    <% end unless @house.photos.first.new_record? rescue nil %>   
+  	    
+  	<div id="photos">
+  	    <%= render :partial => 'photo', :collection => @house.photos %>
+  	</div>
+  
+    <%= link_to_function "Add Photo" do |page|
+        page.insert_html :bottom, :photos, :partial => 'photo', :object => Photo.new
+        end %>
 
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
+
+
 <!-- END #house_form --></div>
