@@ -7,6 +7,8 @@
 		<title>goldhouse <%= controller.action_name %></title>
 		<%= stylesheet_link_tag 'styles' %>
 		<%= javascript_include_tag 'prototype.js' %>
+		<%= javascript_include_tag :defaults %> 
+        <%= yield :page_includes %>
 	</head>
 
 <body>
@@ -21,14 +23,14 @@
 			</ul>
 		<!-- END #navigation --> </div>
 
-	<!-- notifications -->
+        <!-- notifications -->
 		<% unless flash[:notice].blank? %>
 			<div id="notification"><%= flash[:notice] %></div>
 		<% end %>
 		<% unless flash[:error].blank? %>
 			<div id="error"><%= flash[:error] %></div>
 		<% end %>
-	<!-- END notifications -->
+	    <!-- END notifications -->
 
 
 		<%= yield %>

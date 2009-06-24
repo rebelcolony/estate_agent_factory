@@ -14,6 +14,12 @@
 	<%= collection_select(:house, :location_id, Location.find(:all), :id, :location) %>
 	</p>
 	
+	<!-- MAIN IMAGE -->
+	<%= f.label :main_image %>
+	<p>
+	<%= f.file_field :image %>
+	</p>
+	
     <!-- TERMS -->
  	<%= f.label :terms %>
 	<p>

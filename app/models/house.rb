@@ -10,6 +10,8 @@ class House < ActiveRecord::Base
 	belongs_to :term
 	has_many :photos
 	
+	has_attached_file :image, :styles => { :thumb => "190x124>", :large => "400x300>" }
+	
 	def photo_attributes=(photo_attributes)
         photo_attributes.each do |attributes|
     photos.build(attributes)

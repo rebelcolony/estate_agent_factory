@@ -1,13 +1,23 @@
 <div id="house_show">
-	<h3><%=h @house.title %></h3>
- 
-	<h4 class="price"> <%=h number_to_currency(@house.price, :unit => "PHP ", :delimiter => "," )%>  <%=h @house.payment %></h4>
+
+    
+    <div id="main_image">
+	    <%= lightbox_to @house.image.url(:thumb), @house.image.url(:large) %>
+	<!-- END #main_image --></div>
 	
+	<h3><%=h @house.title %></h3>
 	<p><%= @house.location.location %></p>
 	<p><%= @house.term.terms %></p>
-	<p><%=h @house.teaser %></p><p><%=h @house.description %></p>
-
-
+	<h4 class="price"> <%=h number_to_currency(@house.price, :unit => "PHP ", :delimiter => "," )%>  <%=h @house.payment %></h4>
+	
+	<div id="show_teaser">
+	    <p><%=h @house.teaser %></p>
+	</div>
+	
+	<div id="show_description">
+	    <p><%=h @house.description %></p>
+	</div>
+	
 	<ul id="house_numbers">
 	   	<li>Bedrooms: <%=h @house.bedrooms %></li>
 	   	<li>Bathrooms: <%=h @house.bathrooms %></li>
@@ -15,11 +25,16 @@
 	   	<li>Floor Area: <%=h @house.floor_area %> sqm</li>
 	   	<li>Lot Area: <%=h @house.lot_area %> sqm</li>
 	</ul>
-	<% for photo in @house.photos %>
-	    <%= image_tag photo.data.url(:thumb), :alt => "" %>
-	<% end -%>
-	    
-
+	
+	<div id="image_rack">
+	    <% for photo in @house.photos %>
+            <%= lightbox_to photo.data.url(:thumb), photo.data.url(:large), "GoldHouse", "photo" %>
+        <% end -%>
+    
+	    <%= load_lightbox %>   
+	</div>
+	
+	   
 <% if admin? %>
 	<%= link_to 'Edit', edit_house_path(@house) %> |
 	<%= link_to 'Back', houses_path %>
@@ -27,5 +42,4 @@
 
 
 <!-- END #house_show --></div>
-
 

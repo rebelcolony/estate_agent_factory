@@ -1,6 +1,19 @@
 <h2>All houses for sale</h2>
+
+    <% if admin? %>
+		<%= link_to 'New house', new_house_path %>
+	<% end %>
+	
     <% @houses.each do |house| %>
         <div id="house_index_list" class="<%= cycle('list-line-odd', 'list-line-even') %>">
+        
+        <% if house.image.exists? then  -%>
+		  <div id="main_image">
+		      <%= link_to image_tag(house.image.url(:thumb)), house %>
+		  </div>
+        <% else %>
+        <% end -%>
+        
     	    <h3><%= link_to house.title, house %></h3>
 		    <p><%=h house.location.location %></p>
 		    <p><%=h house.term.terms %></p>
@@ -15,6 +28,8 @@
 	   		    <li>Floor Area: <%=h house.floor_area %> sqm</li>
 	   		    <li>Lot Area: <%=h house.lot_area %> sqm</li>
 		    </ul>
+		        
+           		
            		
             <% if admin? %>
             	<td><%= link_to 'Edit', edit_house_path(house) %></td>
@@ -23,9 +38,4 @@
 
   	    <!-- END #house_index_list --></div>
     <% end %>
-    <p>
-	<% if admin? %>
-		<%= link_to 'New house', new_house_path %>
-	<% end %>
-    </p>
-
+    
