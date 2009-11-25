@@ -1,0 +1,14 @@
+development:
+  bucket: goldhouse_development
+  access_key_id: 1855RFP09QCYBC6C09G2
+  secret_access_key: zQ+1vhtVRHNK8CG9jFWGEG3rbUxsZblIFmznC4PO
+
+test:
+  bucket: goldhouse_test
+  access_key_id: 1855RFP09QCYBC6C09G2
+  secret_access_key: zQ+1vhtVRHNK8CG9jFWGEG3rbUxsZblIFmznC4PO
+
+production:
+  bucket: goldhouse
+  access_key_id: 1855RFP09QCYBC6C09G2
+  secret_access_key: zQ+1vhtVRHNK8CG9jFWGEG3rbUxsZblIFmznC4PO

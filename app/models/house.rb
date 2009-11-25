@@ -10,7 +10,8 @@ class House < ActiveRecord::Base
 	belongs_to :term
 	has_many :photos
 	
-	has_attached_file :image, :styles => { :thumb => "190x124>", :large => "400x300>" }
+	has_attached_file :image, :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => ":attachment/:id/:style.:extension", :styles => { :thumb => "190x124>", :large => "400x300>" } 
+	
 	
 	def photo_attributes=(photo_attributes)
         photo_attributes.each do |attributes|
@@ -18,5 +19,3 @@ class House < ActiveRecord::Base
          end
     end
 end
-
-
