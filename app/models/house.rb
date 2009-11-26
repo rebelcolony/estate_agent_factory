@@ -5,6 +5,7 @@ class House < ActiveRecord::Base
 	validates_length_of :teaser, :within => 100..600
 	validates_presence_of :teaser, :description, :price, :payment, :bedrooms, :bathrooms, :maidsrooms, :floor_area, :lot_area
 	validates_numericality_of :price, :bedrooms, :bathrooms, :maidsrooms, :floor_area, :lot_area
+  validates_presence_of :image
 
 	belongs_to :location
 	belongs_to :term
