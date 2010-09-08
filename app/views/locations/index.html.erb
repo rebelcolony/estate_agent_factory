@@ -4,7 +4,7 @@
 <ul>
 <% @locations.each do |location| %>
   
-   <li><%=h location.location %>
+   <li><%=h location.name %>
     <small><%= link_to 'Show', location %>
     <%= link_to 'Edit', edit_location_path(location) %>
   	<%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></small>

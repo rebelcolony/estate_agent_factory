@@ -1,14 +1,19 @@
 /*UNIVERSAL
 ========================================================== */
 h2 {
-margin:0;
-padding:0;
+	color:#333333;
+	margin-top:0px;
+	margin-bottom:2px;
+	line-height:1.4px;
+	font-size:22px;
+	font-weight:bold;
+	font-family:Arial,Verdana,sans-serif
 }
 
 /*BODY
 ========================================================== */
 body { 
-background-color: #4171ce;
+background-color:;
 
 }
 
@@ -22,17 +27,16 @@ body, p, ol, ul, td {
 ========================================================== */
 #wrapper{
 background-color: #ffffff;
-margin: 10px auto;
-width:644px;
-border:1px solid #000000;
-padding:10px 5px;
+margin: 0px auto;
+width:960px;
+padding:0px 5px;
 }
 
 
 /*CLASS
 ========================================================== */
 .price{
-	color:#FBB608;
+	color:#E57B00;
 }
 
 .list-line-odd{
@@ -40,13 +44,36 @@ padding:10px 5px;
 }
 
 .list-line-even{
-	background:; 
+	background:#FDFFEB; 
 }
+
+.clear {
+	clear:both;
+}
+
+/*BANNER
+========================================================== */
+div#banner {
+	height:90px;
+	background:url(../images/rebel_logo.png) no-repeat;
+	margin-bottom:10px;
+}
+
 
 /*HOUSES
 ========================================================== */
+div#house_index_list {
+	padding:2px 6px;
+	border: 1px solid #cdcdcd;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	margin-bottom:16px;
+	
+}
+
+
 #house_index_list h3{
-	margin-top:10px;
+	margin-top:0px;
 	
 }
 
@@ -57,21 +84,41 @@ padding:10px 5px;
 	
 }
 
-#main_image {
+#main_images {
     float:right;
+margin-top:4px;
+}
+
+#main_images img {
+	border:1px solid #3A3A3A;
+}
+
+div#headers {
+	width:400px;
+}
+
+div#teaser {
+	width:500px;
 }
 
 #house_numbers li {
 	display:inline;
-	padding-right: 23px;
-	margin-left:10px;
+	padding-right:10px;
+	margin-left:2px;
+	padding-bottom:0px;
+	
 }
 
-#house_numbers {
-	background:#DCDCDC;
-    margin-top:5px;
-    margin-bottom:5px;
-    padding:0;
+ul#house_numbers {
+	background:;
+    margin-top:0px;
+    margin-bottom:0px;
+	width:581px;
+	margin-left:0px;
+	padding-left:0;
+	border: 1px solid #cdcdcd;
+	-moz-border-radius:2px;
+	-webkit-border-radius:2px;
  }
 
 #house_show h4, h3, p{

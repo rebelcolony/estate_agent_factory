@@ -3,7 +3,7 @@
 <ul>
 <% @terms.each do |term| %>
   
-   	<li><%=h term.terms %>
+   	<li><%=h term.name %>
     	<small><%= link_to 'Show', term %>
   	 	<%= link_to 'Edit', edit_term_path(term) %>
   		<%= link_to 'Destroy', term, :confirm => 'Are you sure?', :method => :delete %></small>

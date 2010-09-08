@@ -1,10 +1,11 @@
 class Photo < ActiveRecord::Base
     belongs_to :house
     
-    has_attached_file :data,  :storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => ":attachment/:id/:style.:extension", 
+    has_attached_file :data,  #:storage => :s3, :s3_credentials => "#{RAILS_ROOT}/config/s3.yml", :path => ":attachment/:id/:style.:extension", 
                         :styles => {
                         :thumb => "100x75#",
-                        :large => "400x300#"
+                        :large => "400x300#",
+                        :normal => "190x124#"
                         }
                         
     validates_attachment_presence :data

@@ -6,8 +6,8 @@
 	<!-- END #main_image --></div>
 	
 	<h3><%=h @house.title %></h3>
-	<p><%= @house.location.location %></p>
-	<p><%= @house.term.terms %></p>
+	<p><%= @house.location.name %></p>
+	<p><%= @house.term.name %></p>
 	<h4 class="price"> <%=h number_to_currency(@house.price, :unit => "PHP ", :delimiter => "," )%>  <%=h @house.payment %></h4>
 	
 	<div id="show_teaser">

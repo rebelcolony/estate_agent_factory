@@ -11,7 +11,7 @@
     <!-- LOCATION -->
  	<%= f.label :location %>
 	<p>
-	<%= collection_select(:house, :location_id, Location.find(:all), :id, :location) %>
+	<%= collection_select(:house, :location_id, Location.find(:all), :id, :name) %>
 	</p>
 	
 	<!-- MAIN IMAGE -->
@@ -23,7 +23,7 @@
     <!-- TERMS -->
  	<%= f.label :terms %>
 	<p>
-	<%= collection_select(:house, :term_id, Term.find(:all), :id, :terms) %>
+	<%= collection_select(:house, :term_id, Term.find(:all), :id, :name) %>
 	</p>
 	
     <!-- TEASER -->
