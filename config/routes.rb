@@ -1,9 +1,11 @@
 Goldhouse::Application.routes.draw do
   
+  devise_for :users
+
   resources :sessions, :terms, :locations, :houses
 
-	match '/login' => 'sessions#new'
-  match '/logout' => 'sessions#destroy'
+	match 'login' => 'sessions#new'
+  match 'logout' => 'sessions#destroy'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
